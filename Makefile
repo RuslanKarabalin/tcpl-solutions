@@ -5,3 +5,6 @@ run:
 
 generate:
 	mkdir -p exercise$(EXNUM) && cp exercise00/main.c exercise$(EXNUM)/main.c
+
+format:
+	clang-format -i $$(find exercise*/ -name '*.c')
