@@ -3,7 +3,7 @@
 // Exercise: Modify the temperature conversion program to print
 // the table in reverse order, that is, from 300 degrees to 0
 int main() {
-    float celsius, fahr;
+    float fahr;
     int lower, upper, step;
 
     lower = 0;
