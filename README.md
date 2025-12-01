@@ -7,9 +7,9 @@ book
 ## Launch examples
 
 ```bash
-make generate EXNUM=01
+make generate EXNUM=101
 ```
 
 ```bash
-make run EXNUM=01
+make run EXNUM=101
 ```

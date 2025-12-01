@@ -1,4 +1,3 @@
-#include "stdbool.h"
 #include "stdio.h"
 
 // Exercise: Write a program to count

@@ -1,3 +1,4 @@
+#include "stdbool.h"
 #include "stdio.h"
 
 // Exercise: Write a program to copy its input to its output,
