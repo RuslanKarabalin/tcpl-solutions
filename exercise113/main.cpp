@@ -1,5 +1,4 @@
-#include <climits>
-
+#include "limits.h"
 #include "stdio.h"
 
 #define IN 1
@@ -65,6 +64,6 @@ int main() {
         }
         printf("\n");
     }
-    delete [] wLengths;
+    delete[] wLengths;
     return 0;
 }
