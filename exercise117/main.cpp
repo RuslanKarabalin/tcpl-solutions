@@ -28,28 +28,17 @@ int getline(char **pline) {
     return len;
 }
 
-// Exercise: Revise the main routine of the
-// longest-line program so it will correctly
-// print the length of arbitrarily long input lines,
-// and as much as possible of the text
+// Exercise: Write a program to print all input
+// lines that are longer than 80 characters
 int main() {
     int len;
-    int max = 0;
     char *line = NULL;
-    char *longest = NULL;
 
     while ((len = getline(&line)) > 0) {
-        if (len > max) {
-            free(longest);
-            longest = line;
-            max = len;
+        if (len > 80) {
+            printf("%s\n", line);
             line = NULL;
-        } else {
-            free(line);
         }
-    }
-    if (max > 0) {
-        printf("%s\n", longest);
     }
     return 0;
 }
