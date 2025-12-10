@@ -16,7 +16,7 @@ int main() {
             ++letters[c - 'a'];
         }
     }
-    int maxLetterUsage = INT_MIN;
+    int maxLetterUsage = 0;
     for (int i = 0; i < ENG_ALPHABET_LENGTH; ++i) {
         if (letters[i] > maxLetterUsage) {
             maxLetterUsage = letters[i];

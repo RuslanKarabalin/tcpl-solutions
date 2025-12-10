@@ -11,7 +11,7 @@ int main() {
     step = 20;
 
     printf("%*s %*s\n", 4, "C", 4, "F");
-    printf("%.*d\n", 10, 0);
+    printf("----------\n");
     for (float celsius = upper; celsius >= lower; celsius -= step) {
         fahr = (9.0 * celsius) / 5.0 + 32.0;
         printf("%6.1f %3.0f\n", celsius, fahr);

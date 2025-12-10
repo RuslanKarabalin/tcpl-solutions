@@ -1,5 +1,6 @@
 #include "limits.h"
 #include "stdio.h"
+#include "stdlib.h"
 
 #define IN 1
 #define OUT 0
@@ -11,18 +12,18 @@ int main() {
     int state = OUT;
     int c;
     int size = 10;
-    int *wLengths = new int[size]();
+    int *wLengths = (int *)calloc(size, sizeof(int));
     int wc = 0;
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
             if (state == IN) {
                 if (wc + 1 >= size) {
                     int newSize = 2 * size;
-                    int *newArr = new int[newSize]();
+                    int *newArr = (int *)malloc(newSize * sizeof(int));
                     for (int i = 0; i < size; ++i) {
                         newArr[i] = wLengths[i];
                     }
-                    delete[] wLengths;
+                    free(wLengths);
                     size = newSize;
                     wLengths = newArr;
                 }
@@ -48,7 +49,7 @@ int main() {
 
     // VERTICAL
     printf("====VERTICAL====\n");
-    int maxWordLength = INT_MIN;
+    int maxWordLength = 0;
     for (int i = 0; i < wc; ++i) {
         if (wLengths[i] > maxWordLength) {
             maxWordLength = wLengths[i];
@@ -64,6 +65,6 @@ int main() {
         }
         printf("\n");
     }
-    delete[] wLengths;
+    free(wLengths);
     return 0;
 }

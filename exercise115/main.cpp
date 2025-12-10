@@ -17,7 +17,7 @@ int main() {
     fahr = lower;
 
     printf("%*s %*s\n", 2, "F", 5, "C");
-    printf("%.*d\n", 10, 0);
+    printf("----------\n");
     while (fahr <= upper) {
         celsius = convertFahrenheitToCelsius(fahr);
         printf("%3.0f %6.1f\n", fahr, celsius);

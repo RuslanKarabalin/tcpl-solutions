@@ -5,16 +5,16 @@
 // replacing each string of one or more blanks by single blank
 int main() {
     int c;
-    bool isFirst = true;
+    bool lastWasSpace = true;
     while ((c = getchar()) != EOF) {
         if (c != ' ') {
             printf("%c", c);
-            if (!isFirst) {
-                isFirst = true;
+            if (!lastWasSpace) {
+                lastWasSpace = true;
             }
         } else {
-            if (isFirst) {
-                isFirst = false;
+            if (lastWasSpace) {
+                lastWasSpace = false;
                 printf("%c", c);
             }
         }

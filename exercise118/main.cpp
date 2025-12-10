@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-int getline(char **pline) {
+int myGetLine(char **pline) {
     int size = 10;
     char *line = (char *)malloc(size);
     if (!line) return -1;
@@ -35,9 +35,9 @@ int main() {
     int len;
     char *line = NULL;
 
-    while ((len = getline(&line)) > 0) {
+    while ((len = myGetLine(&line)) > 0) {
         int lastChar = -1;
-        for (int i = len - 1; i > 0; --i) {
+        for (int i = len - 1; i >= 0; --i) {
             char c = line[i];
             if (c == ' ' || c == '\t') {
                 continue;
