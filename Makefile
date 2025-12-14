@@ -9,6 +9,3 @@ generate:
 
 format:
 	clang-format -i $$(find chapter*/ -name '*.c')
-
-print:
-	@echo EXNUM=$(EXNUM) CH=$(CH)
