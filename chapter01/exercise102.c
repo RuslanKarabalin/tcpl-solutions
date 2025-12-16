@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 // Exercise: Experiment to find out what happens
 // when printf's argument string contains \c,
