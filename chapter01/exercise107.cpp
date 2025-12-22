@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 // Exercise: Write a program to print the value of EOF
 int main() {
