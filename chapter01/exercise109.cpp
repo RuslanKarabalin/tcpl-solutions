@@ -1,5 +1,5 @@
-#include "stdbool.h"
-#include "stdio.h"
+#include <stdbool.h>
+#include <stdio.h>
 
 // Exercise: Write a program to copy its input to its output,
 // replacing each string of one or more blanks by single blank
