@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 // Exercise: Write a program to copy its input to its output,
 // replacing each tab by \t,
