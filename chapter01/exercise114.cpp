@@ -1,5 +1,5 @@
-#include "limits.h"
-#include "stdio.h"
+#include <limits.h>
+#include <stdio.h>
 
 #define ENG_ALPHABET_LENGTH 26
 
