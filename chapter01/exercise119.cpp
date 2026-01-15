@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int myGetLine(char **pline) {
+int myGetLine(char** pline) {
     int size = 10;
-    char *line = (char *)malloc(size);
+    char* line = (char*)malloc(size);
     if (!line) return -1;
 
     int c, len = 0;
     while ((c = getchar()) != EOF && c != '\n') {
         if (len + 1 >= size) {
             size *= 2;
-            char *tmp = (char *)realloc(line, size);
+            char* tmp = (char*)realloc(line, size);
             if (!tmp) {
                 free(line);
                 return -1;
@@ -28,7 +28,7 @@ int myGetLine(char **pline) {
     return len;
 }
 
-void reverse(char *str) {
+void reverse(char* str) {
     int len = 0;
     while (str[len] != '\0') {
         ++len;
@@ -46,7 +46,7 @@ void reverse(char *str) {
 // reverses its input a line at a time.
 int main() {
     int len;
-    char *line = NULL;
+    char* line = NULL;
 
     while ((len = myGetLine(&line)) > 0) {
         reverse(line);

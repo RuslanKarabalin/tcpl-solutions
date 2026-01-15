@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int myGetLine(char **pline) {
+int myGetLine(char** pline) {
     int size = 10;
-    char *line = (char *)malloc(size);
+    char* line = (char*)malloc(size);
     if (!line) return -1;
 
     int c, len = 0;
     while ((c = getchar()) != EOF && c != '\n') {
         if (len + 1 >= size) {
             size *= 2;
-            char *tmp = (char *)realloc(line, size);
+            char* tmp = (char*)realloc(line, size);
             if (!tmp) {
                 free(line);
                 return -1;
@@ -35,8 +35,8 @@ int myGetLine(char **pline) {
 int main() {
     int len;
     int max = 0;
-    char *line = NULL;
-    char *longest = NULL;
+    char* line = NULL;
+    char* longest = NULL;
 
     while ((len = myGetLine(&line)) > 0) {
         if (len > max) {

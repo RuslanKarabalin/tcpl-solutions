@@ -12,14 +12,14 @@ int main() {
     int state = OUT;
     int c;
     int size = 10;
-    int *wLengths = (int *)calloc(size, sizeof(int));
+    int* wLengths = (int*)calloc(size, sizeof(int));
     int wc = 0;
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\n' || c == '\t') {
             if (state == IN) {
                 if (wc + 1 >= size) {
                     int newSize = 2 * size;
-                    int *newArr = (int *)malloc(newSize * sizeof(int));
+                    int* newArr = (int*)malloc(newSize * sizeof(int));
                     for (int i = 0; i < size; ++i) {
                         newArr[i] = wLengths[i];
                     }
